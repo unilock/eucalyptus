@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "eucalyptus:eucalyptus_planks",
+    "eucalyptus:eucalyptus_log",
+    "eucalyptus:eucalyptus_wood",
+    "eucalyptus:eucalyptus_button",
+    "eucalyptus:eucalyptus_door",
+    "eucalyptus:eucalyptus_fence",
+    "eucalyptus:eucalyptus_fence_gate",
+    "eucalyptus:eucalyptus_pressure_plate",
+    "eucalyptus:eucalyptus_sign",
+    "eucalyptus:eucalyptus_slab",
+    "eucalyptus:eucalyptus_stairs",
+    "eucalyptus:eucalyptus_trapdoor",
+    "eucalyptus:eucalyptus_wall_sign",
+    "eucalyptus:stripped_eucalyptus_log",
+    "eucalyptus:stripped_eucalyptus_wood"
+  ]
+}

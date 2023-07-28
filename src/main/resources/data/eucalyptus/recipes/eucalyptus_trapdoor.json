@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_trapdoor",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "eucalyptus:eucalyptus_planks"
+    }
+  },
+  "result": {
+    "item": "eucalyptus:eucalyptus_trapdoor",
+    "count": 2
+  }
+}

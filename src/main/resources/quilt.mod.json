@@ -1,0 +1,44 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "cc.unilock",
+		"id": "eucalyptus",
+		"version": "${version}",
+		"metadata": {
+			"name": "Eucalyptus",
+			"description": "The pink wood",
+			"contributors": {
+				"unilock": "Owner"
+			},
+			"contact": {
+				"issues": "https://github.com/unilock/Eucalyptus/issues",
+				"sources": "https://github.com/unilock/Eucalyptus"
+			},
+			"icon": "assets/eucalyptus/icon.png",
+			"license": "MIT"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "cc.unilock.eucalyptus.Eucalyptus"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": "*"
+			},
+			{
+				"id": "qsl",
+				"versions": "*"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": "*"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.19.2"
+			}
+		]
+	},
+	"mixin": "eucalyptus.mixins.json"
+}
