@@ -1,4 +1,4 @@
-package cc.unilock.eucalyptus.registery;
+package cc.unilock.eucalyptus.registry;
 
 import cc.unilock.eucalyptus.Eucalyptus;
 import net.fabricmc.fabric.api.object.builder.v1.sign.SignTypeRegistry;

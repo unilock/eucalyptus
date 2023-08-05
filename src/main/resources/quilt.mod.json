@@ -14,20 +14,17 @@
 				"issues": "https://github.com/unilock/Eucalyptus/issues",
 				"sources": "https://github.com/unilock/Eucalyptus"
 			},
-			"icon": "assets/eucalyptus/icon.png",
-			"license": "MIT"
+			"license": "MIT",
+			"icon": "assets/eucalyptus/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "cc.unilock.eucalyptus.Eucalyptus"
+			"init": "cc.unilock.eucalyptus.Eucalyptus",
+			"client_init": "cc.unilock.eucalyptus.EucalyptusClient"
 		},
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"versions": "*"
-			},
-			{
-				"id": "qsl",
 				"versions": "*"
 			},
 			{
