@@ -14,6 +14,8 @@ import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.TrunkPlacerType;
 
+import java.util.OptionalInt;
+
 public class EucalyptusFeatures {
 	public static final TrunkPlacerType<EucalyptusTrunkPlacer> EUCALYPTUS_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister(Eucalyptus.id("eucalyptus_trunk_placer").toString(), EucalyptusTrunkPlacer.CODEC);
 
@@ -25,7 +27,7 @@ public class EucalyptusFeatures {
 			new EucalyptusTrunkPlacer(4, 3, 3),
 			BlockStateProvider.of(EucalyptusBlocks.EUCALYPTUS_LEAVES),
 			new AcaciaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0)), // TODO: copy(?) this into its own EucalyptusFoliagePlacer, for future proofing
-			new TwoLayersFeatureSize(1, 0, 4)
+			new TwoLayersFeatureSize(1, 0, 2, OptionalInt.of(6))
 		).build()
 	);
 
