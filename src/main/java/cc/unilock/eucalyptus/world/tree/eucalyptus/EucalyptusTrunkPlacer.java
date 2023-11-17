@@ -25,7 +25,7 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 
 	@Override
 	protected TrunkPlacerType<?> getType() {
-		return EucalyptusFeatures.EUCALYPTUS_TRUNK_PLACER;
+		return EucalyptusFeatures.EUCALYPTUS_TRUNK_PLACER_TYPE;
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 			this.method_35375(world, replacer, random, startPos.up(i), config);
 		}
 
-		List<FoliagePlacer.TreeNode> list = Lists.<FoliagePlacer.TreeNode>newArrayList();
+		List<FoliagePlacer.TreeNode> list = Lists.newArrayList();
 
 		list.add(new FoliagePlacer.TreeNode(startPos.up(height), 0, false));
 
