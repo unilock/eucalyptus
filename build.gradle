@@ -22,7 +22,6 @@ dependencies {
 
 	modImplementation libs.qsl
 	modImplementation libs.quilted.fabric.api
-	// modImplementation libs.bundles.quilted.fabric.api
 }
 
 processResources {
