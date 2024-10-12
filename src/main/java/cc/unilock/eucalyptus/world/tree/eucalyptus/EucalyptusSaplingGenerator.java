@@ -12,6 +12,6 @@ public class EucalyptusSaplingGenerator extends SaplingGenerator {
 	@Nullable
 	@Override
 	protected Holder<? extends ConfiguredFeature<TreeFeatureConfig, ?>> getTreeFeature(RandomGenerator random, boolean bees) {
-		return EucalyptusFeatures.EUCALYPTUS_TREE;
+		return EucalyptusFeatures.EUCALYPTUS_CONFIGURED;
 	}
 }

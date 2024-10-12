@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "eucalyptus",
+	"version": "${version}",
+	"name": "Eucalyptus",
+	"description": "The pink wood",
+	"authors": [
+		"unilock"
+	],
+	"contact": {
+		"sources": "https://github.com/unilock/Eucalyptus",
+		"issues": "https://github.com/unilock/Eucalyptus/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/eucalyptus/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cc.unilock.eucalyptus.Eucalyptus"
+		],
+		"client": [
+			"cc.unilock.eucalyptus.EucalyptusClient"
+		]
+	},
+	"mixins": [
+		"eucalyptus.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": ">=1.19.2",
+		"fabric-api": "*"
+	}
+}
