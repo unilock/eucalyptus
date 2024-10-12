@@ -6,7 +6,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.random.RandomGenerator;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.TestableWorld;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.foliage.FoliagePlacer;
@@ -29,12 +29,11 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 	}
 
 	@Override
-	public List<FoliagePlacer.TreeNode> generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, RandomGenerator random, int height, BlockPos startPos, TreeFeatureConfig config) {
+	public List<FoliagePlacer.TreeNode> generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos startPos, TreeFeatureConfig config) {
 		setToDirt(world, replacer, random, startPos.down(), config);
 
 		for (int i = 0; i < height; i++) {
-			// method_35375 = getAndSetState
-			this.method_35375(world, replacer, random, startPos.up(i), config);
+			this.getAndSetState(world, replacer, random, startPos.up(i), config);
 		}
 
 		List<FoliagePlacer.TreeNode> list = Lists.newArrayList();
@@ -46,7 +45,7 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 		return list;
 	}
 
-	private void generateTree(List<FoliagePlacer.TreeNode> list, TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, RandomGenerator random, int height, BlockPos startPos, TreeFeatureConfig config) {
+	private void generateTree(List<FoliagePlacer.TreeNode> list, TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos startPos, TreeFeatureConfig config) {
 		this.genBranch(list, world, replacer, random, height, startPos, config, 1);
 		this.genBranch(list, world, replacer, random, height, startPos, config, 2);
 		this.genBranch(list, world, replacer, random, height, startPos, config, 3);
@@ -58,7 +57,7 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 		list.add(this.generateNode(world, replacer, random, startPos.up(height), config));
 	}
 
-	private void genBranch(List<FoliagePlacer.TreeNode> list, TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, RandomGenerator random, int height, BlockPos pos, TreeFeatureConfig config, int direction)
+	private void genBranch(List<FoliagePlacer.TreeNode> list, TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos pos, TreeFeatureConfig config, int direction)
 	{
 		int posX = pos.getX();
 		int posY = pos.getY() + height - 3;
@@ -108,12 +107,10 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 
 			if (branch == 2)
 			{
-				//this.setBlockAndMetadata(world, blockpos.down(), this.log);
-				this.method_35375(world, replacer, random, blockpos.down(), config);
+				this.getAndSetState(world, replacer, random, blockpos.down(), config);
 			}
 
-			//this.setBlockAndMetadata(world, blockpos, this.log);
-			this.method_35375(world, replacer, random, blockpos, config);
+			this.getAndSetState(world, replacer, random, blockpos, config);
 
 			if (bIter == 1)
 			{
@@ -124,7 +121,7 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 		}
 	}
 
-	private void genStraightBranch(List<FoliagePlacer.TreeNode> list, TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, RandomGenerator random, int height, BlockPos pos, TreeFeatureConfig config, int direction)
+	private void genStraightBranch(List<FoliagePlacer.TreeNode> list, TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos pos, TreeFeatureConfig config, int direction)
 	{
 		int posX = pos.getX();
 		int posY = pos.getY() + height - 3;
@@ -176,12 +173,10 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 
 			if (branch == 2)
 			{
-				//this.setBlockAndMetadata(world, blockpos.down(), this.log);
-				this.method_35375(world, replacer, random, blockpos.down(), config);
+				this.getAndSetState(world, replacer, random, blockpos.down(), config);
 			}
 
-			//this.setBlockAndMetadata(world, blockpos, this.log);
-			this.method_35375(world, replacer, random, blockpos, config);
+			this.getAndSetState(world, replacer, random, blockpos, config);
 
 			if (j2 == 1)
 			{
@@ -192,10 +187,9 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 		}
 	}
 
-	public FoliagePlacer.TreeNode generateNode(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, RandomGenerator random, BlockPos pos, TreeFeatureConfig config)
+	public FoliagePlacer.TreeNode generateNode(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, BlockPos pos, TreeFeatureConfig config)
 	{
-		//this.setBlockAndMetadata(world, pos, this.log);
-		this.method_35375(world, replacer, random, pos, config);
+		this.getAndSetState(world, replacer, random, pos, config);
 
 		/*
 		for (int xIter = pos.getX() - 2; xIter <= pos.getX() + 2; xIter++)

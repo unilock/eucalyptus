@@ -3,7 +3,7 @@
 	"package": "cc.unilock.eucalyptus.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"TrunkPlacerTypeInvoker"
+    "accessor.TrunkPlacerTypeAccessor"
 	],
 	"client": [],
 	"injectors": {
