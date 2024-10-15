@@ -1,5 +1,5 @@
 {
-  "itemGroup.eucalyptus.item_group":              "Eucalyptus",
+  "itemGroup.eucalyptus.main":                    "Eucalyptus",
   "block.eucalyptus.eucalyptus_sapling.tooltip":  "The pink wood",
   "block.eucalyptus.eucalyptus_sapling":          "Eucalyptus Sapling",
   "block.eucalyptus.eucalyptus_leaves":           "Eucalyptus Leaves",

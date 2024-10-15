@@ -1,7 +1,7 @@
 package cc.unilock.eucalyptus.block;
 
+import cc.unilock.eucalyptus.world.tree.eucalyptus.EucalyptusSaplingGenerator;
 import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -12,8 +12,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class EucalyptusSaplingBlock extends SaplingBlock {
-	public EucalyptusSaplingBlock(SaplingGenerator generator, Settings settings) {
-		super(generator, settings);
+	public EucalyptusSaplingBlock(Settings settings) {
+		super(new EucalyptusSaplingGenerator(), settings);
 	}
 
 	@Override

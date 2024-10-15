@@ -1,12 +1,15 @@
 package cc.unilock.eucalyptus;
 
+import cc.unilock.eucalyptus.registry.EucalyptusBiomeModifications;
+import cc.unilock.eucalyptus.registry.EucalyptusBlockSetTypes;
 import cc.unilock.eucalyptus.registry.EucalyptusBlocks;
-import cc.unilock.eucalyptus.registry.EucalyptusFeatures;
+import cc.unilock.eucalyptus.registry.EucalyptusConfiguredFeatures;
+import cc.unilock.eucalyptus.registry.EucalyptusItemGroups;
 import cc.unilock.eucalyptus.registry.EucalyptusItems;
+import cc.unilock.eucalyptus.registry.EucalyptusPlacedFeatures;
+import cc.unilock.eucalyptus.registry.EucalyptusTrunkPlacerTypes;
+import cc.unilock.eucalyptus.registry.EucalyptusWoodTypes;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,14 +20,19 @@ public class Eucalyptus implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		EucalyptusBlockSetTypes.init();
+		EucalyptusWoodTypes.init();
+
 		EucalyptusBlocks.init();
 		EucalyptusItems.init();
-		EucalyptusFeatures.init();
-	}
+		EucalyptusItemGroups.init();
 
-	public static final ItemGroup EUCALYPTUS_ITEM_GROUP = FabricItemGroupBuilder.create(id("item_group"))
-		.icon(() -> new ItemStack(EucalyptusItems.EUCALYPTUS_DOOR))
-		.build();
+		EucalyptusTrunkPlacerTypes.init();
+		EucalyptusConfiguredFeatures.init();
+		EucalyptusPlacedFeatures.init();
+
+		EucalyptusBiomeModifications.register();
+	}
 
 	public static Identifier id(String path) {
 		return new Identifier(MOD_ID, path);

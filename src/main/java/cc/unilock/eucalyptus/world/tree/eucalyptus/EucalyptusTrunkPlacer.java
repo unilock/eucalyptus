@@ -1,6 +1,6 @@
 package cc.unilock.eucalyptus.world.tree.eucalyptus;
 
-import cc.unilock.eucalyptus.registry.EucalyptusFeatures;
+import cc.unilock.eucalyptus.registry.EucalyptusTrunkPlacerTypes;
 import com.google.common.collect.Lists;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -25,7 +25,7 @@ public class EucalyptusTrunkPlacer extends TrunkPlacer {
 
 	@Override
 	protected TrunkPlacerType<?> getType() {
-		return EucalyptusFeatures.EUCALYPTUS_TRUNK_PLACER_TYPE;
+		return EucalyptusTrunkPlacerTypes.EUCALYPTUS;
 	}
 
 	@Override
