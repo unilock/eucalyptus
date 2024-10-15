@@ -6,6 +6,8 @@ import cc.unilock.eucalyptus.mixinsupport.BlockEntityTypeExtension;
 import cc.unilock.eucalyptus.world.tree.eucalyptus.EucalyptusSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DoorBlock;
@@ -58,5 +60,16 @@ public class EucalyptusBlocks {
 			EUCALYPTUS_SIGN,
 			EUCALYPTUS_WALL_SIGN
 		);
+
+		FlammableBlockRegistry.getDefaultInstance().add(EucalyptusTags.Blocks.EUCALYPTUS_LOGS, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(EUCALYPTUS_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(EUCALYPTUS_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(EUCALYPTUS_FENCE, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(EUCALYPTUS_FENCE_GATE, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(EUCALYPTUS_SLAB, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(EUCALYPTUS_STAIRS, 5, 20);
+
+		StrippableBlockRegistry.register(EUCALYPTUS_LOG, STRIPPED_EUCALYPTUS_LOG);
+		StrippableBlockRegistry.register(EUCALYPTUS_WOOD, STRIPPED_EUCALYPTUS_WOOD);
 	}
 }

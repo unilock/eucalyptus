@@ -1,7 +1,0 @@
-{
-  "replace": false,
-  "values": {
-    "eucalyptus:eucalyptus_log": "eucalyptus:stripped_eucalyptus_log",
-    "eucalyptus:eucalyptus_wood": "eucalyptus:stripped_eucalyptus_wood"
-  }
-}
