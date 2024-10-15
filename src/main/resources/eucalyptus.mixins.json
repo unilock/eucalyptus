@@ -1,12 +1,13 @@
 {
-	"required": true,
-	"package": "cc.unilock.eucalyptus.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
+  "required": true,
+  "package": "cc.unilock.eucalyptus.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BlockEntityTypeMixin",
     "accessor.TrunkPlacerTypeAccessor"
-	],
-	"client": [],
-	"injectors": {
-		"defaultRequire": 1
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }
