@@ -3,9 +3,10 @@
 	"id": "eucalyptus",
 	"version": "${version}",
 	"name": "Eucalyptus",
-	"description": "The pink wood",
+	"description": "The pink wood\n\nTextures belong to Natura's contributors and are licensed CC-BY-3.0",
 	"authors": [
-		"unilock"
+		"unilock",
+		"Natura (assets)"
 	],
 	"contact": {
 		"sources": "https://github.com/unilock/Eucalyptus",
