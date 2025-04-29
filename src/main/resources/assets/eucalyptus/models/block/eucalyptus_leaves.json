@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:block/leaves",
-    "textures": {
-        "all": "eucalyptus:block/eucalyptus_leaves"
-    }
+		"parent": "minecraft:block/leaves",
+		"textures": {
+				"all": "eucalyptus:block/eucalyptus_leaves"
+		}
 }

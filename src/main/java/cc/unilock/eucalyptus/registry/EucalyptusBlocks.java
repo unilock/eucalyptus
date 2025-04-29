@@ -7,19 +7,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.DoorBlock;
-import net.minecraft.block.FenceBlock;
-import net.minecraft.block.FenceGateBlock;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.PillarBlock;
-import net.minecraft.block.PressurePlateBlock;
-import net.minecraft.block.SignBlock;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
-import net.minecraft.block.TrapdoorBlock;
-import net.minecraft.block.WallSignBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
@@ -43,7 +31,11 @@ public class EucalyptusBlocks {
 	public static final Block STRIPPED_EUCALYPTUS_WOOD = registerBlockItem("stripped_eucalyptus_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
 	public static final Block EUCALYPTUS_DOOR = registerBlock("eucalyptus_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), EucalyptusBlockSetTypes.EUCALYPTUS));
 	public static final Block EUCALYPTUS_SIGN = registerBlock("eucalyptus_sign", new SignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN), EucalyptusWoodTypes.EUCALYPTUS));
-	public static final Block EUCALYPTUS_WALL_SIGN = registerBlock("eucalyptus_wall_sign", new WallSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).dropsLike(EUCALYPTUS_SIGN), EucalyptusWoodTypes.EUCALYPTUS));
+	public static final Block EUCALYPTUS_WALL_SIGN = registerBlock("eucalyptus_wall_sign", new WallSignBlock(FabricBlockSettings.copyOf(EUCALYPTUS_SIGN).dropsLike(EUCALYPTUS_SIGN), EucalyptusWoodTypes.EUCALYPTUS));
+	// EUCALYPTUS_BOAT !?
+	// EUCALYPTUS_CHEST_BOAT !?
+	// EUCALYPTUS_HANGING_SIGN (needs CEILING and WALL variants)
+	// POTTED_EUCALYPTUS_SAPLING
 
 	private static Block registerBlock(String path, Block block) {
 		return Registry.register(Registries.BLOCK, Eucalyptus.id(path), block);

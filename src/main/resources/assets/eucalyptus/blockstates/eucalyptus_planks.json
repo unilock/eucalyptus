@@ -1,7 +1,7 @@
 {
-  "variants": {
-    "": {
-      "model": "eucalyptus:block/eucalyptus_planks"
-    }
-  }
+	"variants": {
+		"": {
+			"model": "eucalyptus:block/eucalyptus_planks"
+		}
+	}
 }

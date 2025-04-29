@@ -1,14 +1,6 @@
 package cc.unilock.eucalyptus;
 
-import cc.unilock.eucalyptus.registry.EucalyptusBiomeModifications;
-import cc.unilock.eucalyptus.registry.EucalyptusBlockSetTypes;
-import cc.unilock.eucalyptus.registry.EucalyptusBlocks;
-import cc.unilock.eucalyptus.registry.EucalyptusConfiguredFeatures;
-import cc.unilock.eucalyptus.registry.EucalyptusItemGroups;
-import cc.unilock.eucalyptus.registry.EucalyptusItems;
-import cc.unilock.eucalyptus.registry.EucalyptusPlacedFeatures;
-import cc.unilock.eucalyptus.registry.EucalyptusTrunkPlacerTypes;
-import cc.unilock.eucalyptus.registry.EucalyptusWoodTypes;
+import cc.unilock.eucalyptus.registry.*;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -25,6 +17,8 @@ public class Eucalyptus implements ModInitializer {
 
 		EucalyptusBlocks.init();
 		EucalyptusItems.init();
+
+		EucalyptusBlockFamilies.init();
 		EucalyptusItemGroups.init();
 
 		EucalyptusTrunkPlacerTypes.init();

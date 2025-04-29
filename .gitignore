@@ -7,6 +7,7 @@ classes/
 # Fabric Loom
 remappedSrc/
 run/
+src/main/generated/.cache
 
 # Eclipse
 *.launch

@@ -1,7 +1,7 @@
 {
-    "variants": {
-        "": {
-            "model": "eucalyptus:block/eucalyptus_sapling"
-        }
-    }
+		"variants": {
+				"": {
+						"model": "eucalyptus:block/eucalyptus_sapling"
+				}
+		}
 }

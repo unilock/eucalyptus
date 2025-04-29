@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/button",
-  "textures": {
-    "texture": "eucalyptus:block/eucalyptus_planks"
-  }
+	"parent": "minecraft:block/button",
+	"textures": {
+		"texture": "eucalyptus:block/eucalyptus_planks"
+	}
 }

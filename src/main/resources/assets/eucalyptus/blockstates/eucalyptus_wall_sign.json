@@ -1,7 +1,7 @@
 {
-  "variants": {
-    "": {
-      "model": "eucalyptus:block/eucalyptus_sign"
-    }
-  }
+	"variants": {
+		"": {
+			"model": "eucalyptus:block/eucalyptus_sign"
+		}
+	}
 }

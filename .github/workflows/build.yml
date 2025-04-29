@@ -1,6 +1,6 @@
 # Automatically build the project and run any configured tests for every push
 # and submitted pull request. This can help catch issues that only occur on
-# certain platforms or Java versions, and provides a first line of defense
+# certain platforms or Java versions, and provides a first line of defence
 # against bad commits.
 
 name: build
@@ -13,9 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@v2
-
       - name: Setup JDK 17
         uses: actions/setup-java@v4
         with:
@@ -25,15 +22,16 @@ jobs:
       - name: Setup Gradle caches
         uses: actions/cache@v4
         with:
+          cache-overwrite-existing: true
           path: |
             ~/.gradle/caches
             ~/.gradle/loom-cache
             ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.properties') }}
-          restore-keys: ${{ runner.os }}-gradle
+          key: gradle-${{ hashFiles('**/gradle-wrapper.properties') }}
+          restore-keys: gradle
 
-      - name: Make Gradle wrapper executable
-        run: chmod +x ./gradlew
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Build
         run: ./gradlew build
