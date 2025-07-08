@@ -2,6 +2,7 @@ package cc.unilock.eucalyptus.datagen.provider;
 
 import cc.unilock.eucalyptus.registry.EucalyptusBlockFamilies;
 import cc.unilock.eucalyptus.registry.EucalyptusBlocks;
+import cc.unilock.eucalyptus.registry.EucalyptusItems;
 import cc.unilock.eucalyptus.registry.EucalyptusTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -24,5 +25,6 @@ public class EucalyptusRecipeProvider extends FabricRecipeProvider {
 //		offerBoatRecipe(consumer, Items.OAK_BOAT, Blocks.OAK_PLANKS);
 //		offerChestBoatRecipe(consumer, Items.OAK_CHEST_BOAT, Items.OAK_BOAT);
 //		offerHangingSignRecipe(consumer, Items.OAK_HANGING_SIGN, Blocks.STRIPPED_OAK_LOG);
+		offerHangingSignRecipe(consumer, EucalyptusItems.EUCALYPTUS_HANGING_SIGN, EucalyptusBlocks.STRIPPED_EUCALYPTUS_LOG);
 	}
 }

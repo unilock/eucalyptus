@@ -21,14 +21,12 @@ public class EucalyptusItemTagProvider extends FabricTagProvider.ItemTagProvider
 		copy(EucalyptusTags.Blocks.EUCALYPTUS_LOGS, EucalyptusTags.Items.EUCALYPTUS_LOGS);
 
 		getOrCreateTagBuilder(ItemTags.BUTTONS).add(EucalyptusBlocks.EUCALYPTUS_BUTTON.asItem());
-		//getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS).add();
 		getOrCreateTagBuilder(ItemTags.FENCE_GATES).add(EucalyptusBlocks.EUCALYPTUS_FENCE_GATE.asItem());
-		//getOrCreateTagBuilder(BlockTags.FLOWER_POTS).add();
 		getOrCreateTagBuilder(ItemTags.LEAVES).add(EucalyptusBlocks.EUCALYPTUS_LEAVES.asItem());
 		getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN).addTag(EucalyptusTags.Items.EUCALYPTUS_LOGS);
 		getOrCreateTagBuilder(ItemTags.PLANKS).add(EucalyptusBlocks.EUCALYPTUS_PLANKS.asItem());
 		getOrCreateTagBuilder(ItemTags.SAPLINGS).add(EucalyptusBlocks.EUCALYPTUS_SAPLING.asItem());
-		//getOrCreateTagBuilder(ItemTags.HANGING_SIGNS).add();
+		getOrCreateTagBuilder(ItemTags.HANGING_SIGNS).add(EucalyptusItems.EUCALYPTUS_HANGING_SIGN);
 		getOrCreateTagBuilder(ItemTags.SIGNS).add(EucalyptusItems.EUCALYPTUS_SIGN);
 		getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS).add(EucalyptusBlocks.EUCALYPTUS_BUTTON.asItem());
 		getOrCreateTagBuilder(ItemTags.WOODEN_DOORS).add(EucalyptusItems.EUCALYPTUS_DOOR);
